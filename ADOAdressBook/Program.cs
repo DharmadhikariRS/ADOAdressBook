@@ -11,13 +11,17 @@
 
             void ShowOptions()
             {
-                Console.Write("\n Select Option : 1.Display Contacts  \t");
+                Console.Write("\n Select Option : 1.Display Contacts\n 2.Add contact\n");
                 Console.WriteLine();
                 int option = int.Parse(Console.ReadLine());
                 switch (option)
                 {
                     case 1:
                         Book.GetContactDetails();
+                        ShowOptions();
+                        break;
+                    case 2:
+                        Book.AddContact();
                         ShowOptions();
                         break;
                     default:
